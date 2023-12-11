@@ -31,3 +31,30 @@ React는 SPA(Single Page Application)이기 때문에, 리랜더링을 권장하
 ### Image 태그
 
 Next JS에서는 img 태그가 아닌 Image 태그를 사용하는데, Next JS 에서는 이미지 최적화 기능이 있기 때문에 Image 태그를 사용하여 이미지 최적화를 할 수 있다.
+
+### CSS
+
+- tailwind -> 호불호가 너무 심하고, 가독성이 좋지 않다.
+- Stlyed Component -> SSR(Server Compoents)에서 문제가 있다.
+- Emotion -> Next 13 버전과 호환 문제
+- SASS -> 러닝커브.
+- CSS Module -> 간단하다.
+- Vanilla Extract -> Windows와 호환 문제
+
+#### Dynamic Viewport
+
+주소 표시줄이 스크롤을 통해 축소가 되건 노출이 되건 상관없이 현재 보여지는 뷰포트 높이를 동적으로 가져온다.
+
+- dvw : width
+- dvh : heigth
+
+### 패러렐 라우트 (Parallel Routes)
+
+동일한 레이아웃에서 하나 이상의 페이지를 동시에 또는 조건부로 랜더링
+
+- 최상단 폴더에 layout.tsx , page.tsx 가 필요하다.
+- 최상한 layout.tsx 에 children 만 존재하는데, 아래에 같이 랜더링 할 요소도 작성.
+- @foldername 폴더를 생성
+- 생성된 폴더 안에 page.tsx 생성
+
+### 인터셉팅 라우트 (Intercepting Routes)
