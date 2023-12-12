@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import stlyes from '@/app/page.module.css';
+import stlyes from '@/app/(beforeLogin)/_component/main.module.css';
 
 type Props = { children: ReactNode; modal: ReactNode };
 
