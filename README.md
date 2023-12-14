@@ -2,6 +2,8 @@
 
 ## Next JS 공부 정리
 
+## Chapter 1
+
 ### 라우팅
 
 [폴더명] : [] 대괄호를 감아서 폴더를 생성하면, "다이나믹 라우팅" 이라는 기능을 사용할 수 있다.
@@ -87,3 +89,35 @@ Next JS에서는 img 태그가 아닌 Image 태그를 사용하는데, Next JS �
 프라이빗 폴더는 주소창에 경로가 나타나지 않는다.
 
 주로 사용하는 용도는 폴더 정리용으로 사용된다.
+
+## Chapter 2
+
+### CSS
+
+#### Flex Grow
+
+Flex 를 이용한 레이아웃을 잡을때 양쪽의 여백을 똑같이 만들고 싶다면, 두 Flex 에 flex-grow: 1을 주면 된다.
+
+#### Inherit
+
+부모 width 값을 그대로 사용해야 할 때, 주로 사용된다.
+
+일반적으로 width: 100% 를 자주사용하게 되는데, 잘 안먹히는 경우가 있어서 width: inherit; 을 권장.
+
+### ActiveLink
+
+해당하는 페이지로 이동하면 Nav 텍스트를 Bold 처리하며, 해당 페이지가 활성화 되어있다는 시각적인 효과를 준다.
+
+### useSelectedLayoutSegment / useSelectedLayoutSegments
+
+Layout 내부의 라우트 세그먼트를 가져올 수 있다.
+
+Layout 기준으로, 바로 자식의 요소들만 필요하면 useSelectedLayoutSegment
+바로 자식의 요소뿐만 아니라, 완전 자식 요소까지 모두 필요하다면 useSelectedLayoutSegments
+
+### 'use client'
+
+컴포넌트 내부에 React Hooks나 onClick 이벤트같은게 존재한다면 클라이언트 컴포넌트 이기 때문에,
+'use client' 를 사용하면 된다.
+
+###
