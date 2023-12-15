@@ -104,6 +104,10 @@ Flex 를 이용한 레이아웃을 잡을때 양쪽의 여백을 똑같이 만�
 
 일반적으로 width: 100% 를 자주사용하게 되는데, 잘 안먹히는 경우가 있어서 width: inherit; 을 권장.
 
+### backdrop-filter: blur;
+
+블러처리를 해주는 CSS.
+
 ### ActiveLink
 
 해당하는 페이지로 이동하면 Nav 텍스트를 Bold 처리하며, 해당 페이지가 활성화 되어있다는 시각적인 효과를 준다.
@@ -120,4 +124,24 @@ Layout 기준으로, 바로 자식의 요소들만 필요하면 useSelectedLayou
 컴포넌트 내부에 React Hooks나 onClick 이벤트같은게 존재한다면 클라이언트 컴포넌트 이기 때문에,
 'use client' 를 사용하면 된다.
 
-###
+### TabProvider - Context Api
+
+전역적으로 상태관리를 해주기 위해 사용된다.
+
+Provier.tsx 를 생성해주고,
+전역상태로 관리할 tab의 상태값을 설정
+
+```
+export const TabContext = createContext({
+  tab: 'rec',
+  setTab: (value: 'rec' | 'fol') => {},
+});
+
+export default function TabProvider({ children }: Props) {
+  const [tab, setTab] = useState('rec');
+
+  return <TabContext.Provider value={{ tab, setTab }}>{children}</TabContext.Provider>;
+}
+```
+
+전역으로 상태관리할 home의 page.tsx에 provider를 지정.
