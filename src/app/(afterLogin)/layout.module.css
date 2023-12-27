@@ -12,7 +12,7 @@
 }
 
 .leftSection {
-  width: 275px;
+  width: 72px;
   height: 100dvh;
 }
 
@@ -20,8 +20,22 @@
   position: fixed;
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: inherit; /* 부모의 width 값을 그대로 상속할 때 사용 */
   height: 100dvh;
+  padding: 0 8px;
+}
+
+/* 왼쪽 Nav 영역 반응형 */
+@media all and (min-width: 1300px) {
+  .leftSection {
+    width: 275px;
+    height: 100dvh;
+  }
+
+  .leftSectionFixed {
+    align-items: flex-start;
+  }
 }
 
 .leftSectionFixed nav {
@@ -51,15 +65,16 @@
   background-color: rgba(15, 20, 25, 0.1);
 }
 
+/* 게시하기 버튼 */
 .postButton {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 234px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   margin: 16px 0;
   border: none;
-  border-radius: 26px;
+  border-radius: 50%;
   color: rgb(255, 255, 255);
   font-weight: 700;
   font-size: 17px;
@@ -67,8 +82,34 @@
   background-color: rgb(29, 155, 240);
 }
 
+.postButton span {
+  display: none;
+}
+
+.postButton svg {
+  display: inline-block;
+  fill: white;
+}
+
 .postButton:hover {
   background-color: rgb(26, 140, 216);
+}
+
+/* 게시하기 버튼 반응형 */
+@media all and (min-width: 1300px) {
+  .postButton {
+    width: 234px;
+    height: 52px;
+    border-radius: 26px;
+  }
+
+  .postButton span {
+    display: inline-block;
+  }
+
+  .postButton svg {
+    display: none;
+  }
 }
 
 .rightSectionWrapper {
@@ -82,7 +123,7 @@
 .rightSectionInner {
   display: flex;
   justify-content: space-between;
-  width: 990px;
+  width: 600px;
   height: 100%;
 }
 
@@ -92,8 +133,19 @@
 }
 
 .rightSection {
-  width: 350px;
-  height: 100%;
+  display: none;
+}
+
+@media all and (min-width: 1024px) {
+  .rightSection {
+    display: inline-block;
+    width: 350px;
+    height: 100%;
+  }
+
+  .rightSectionInner {
+    width: 990px;
+  }
 }
 
 .followRecommend {

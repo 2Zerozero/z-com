@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@/app/(afterLogin)/@modal/compose/tweet/page.module.css';
+import styles from '@/app/(afterLogin)/@modal/(.)compose/tweet/page.module.css';
 import { useRef, useState } from 'react';
 
 export default function Page() {

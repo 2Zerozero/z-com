@@ -1,7 +1,7 @@
 .logOutButton {
   display: flex;
   align-items: center;
-  width: 258px;
+  width: 66px;
   height: 66px;
   padding: 12px;
   margin: 12px 0;
@@ -10,21 +10,33 @@
   text-align: left;
   background-color: #fff;
 }
-.logOutButton:hover {
-  background-color: rgba(15, 20, 25, 0.1);
-  border-radius: 33px;
-}
+
 .logOutUserImage {
   display: flex;
   align-items: center;
 }
+
 .logOutUserImage img {
   width: 40px;
   border-radius: 50%;
 }
+
 .logOutUserName {
-  margin: 0 12px;
+  display: none;
 }
-.logOutUserName > div:first-child {
-  font-weight: bold;
+@media all and (min-width: 1300px) {
+  .logOutButton {
+    width: 258px;
+  }
+  .logOutButton:hover {
+    background-color: rgba(15, 20, 25, 0.1);
+    border-radius: 33px;
+  }
+  .logOutUserName {
+    display: inline-block;
+    margin: 0 12px;
+  }
+  .logOutUserName > div:first-child {
+    font-weight: bold;
+  }
 }
