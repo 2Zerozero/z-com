@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { MSWComponent } from './_component/MSWComponent';
 
 type Props = {
   children: React.ReactNode;
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
+      <MSWComponent />
       <body className={inter.className}>{children}</body>
     </html>
   );
